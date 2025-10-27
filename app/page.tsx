@@ -81,6 +81,15 @@ export default function Home() {
     setSelectedJob(null);
   };
 
+  // Auto-focus first input when modal opens
+  useEffect(() => {
+    if (showModal) {
+      setTimeout(() => {
+        document.getElementById('modal-nombre')?.focus();
+      }, 100);
+    }
+  }, [showModal]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -237,6 +246,9 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        {/* Dark gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-5"></div>
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
@@ -271,15 +283,15 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 drop-shadow-2xl px-2">
+              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 px-2" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.6), 0 0 15px rgba(0,0,0,0.3)' }}>
                 <span className="text-white">TRABAJA</span>{' '}
                 <span className="text-white">EN</span>{' '}
-                <span className="text-white">ALMERÍA</span>
+                <span className="text-white">ALMERÍA, ESPAÑA</span>
           </h1>
-            <p className="text-base sm:text-xl md:text-2xl text-white mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-lg px-2">
+            <p className="text-xl sm:text-xl md:text-2xl text-white mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto px-2" style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.6), 0 0 10px rgba(0,0,0,0.3)' }}>
               ¡Únete a nuestro equipo! Oportunidades laborales en jardinería, construcción y limpieza
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-xl mx-auto drop-shadow-md px-2">
+            <p className="text-lg sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-xl mx-auto px-2" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.6), 0 0 8px rgba(0,0,0,0.2)' }}>
               🌴 Entre playas paradisíacas y el desierto de Tabernas
             </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
@@ -328,10 +340,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
+            <h2 className="text-5xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
               ¿Por qué Almería?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+            <p className="text-xl sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
               Almería ofrece un entorno único para trabajar y vivir, combinando la belleza natural con oportunidades laborales excepcionales
             </p>
           </motion.div>
@@ -352,8 +364,8 @@ export default function Home() {
               >
                 <span className="text-3xl">☀️</span>
               </motion.div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Clima ideal todo el año</h3>
-              <p className="text-gray-600">Mas de 300 dias de sol al año</p>
+              <h3 className="text-2xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Clima ideal todo el año</h3>
+              <p className="text-gray-600 text-lg">Mas de 300 dias de sol al año</p>
             </motion.div>
 
             <motion.div 
@@ -371,8 +383,8 @@ export default function Home() {
               >
                 <span className="text-3xl">🛠️</span>
               </motion.div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Oportunidad laboral en crecimiento</h3>
-              <p className="text-gray-600">Mucha demanda de personal en sectores como la construccion y la jardineria</p>
+              <h3 className="text-2xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Oportunidad laboral en crecimiento</h3>
+              <p className="text-gray-600 text-lg">Mucha demanda de personal en sectores como la construccion y la jardineria</p>
             </motion.div>
 
             <motion.div 
@@ -390,8 +402,8 @@ export default function Home() {
               >
                 <span className="text-3xl">💵</span>
               </motion.div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Bajo costo de vida</h3>
-              <p className="text-gray-600">Almería es económico, bajo costo en comida y transporte, posiibilidad de ahorrar cada mes</p>
+              <h3 className="text-2xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Bajo costo de vida</h3>
+              <p className="text-gray-600 text-lg">Almería es económico, bajo costo en comida y transporte, posiibilidad de ahorrar cada mes</p>
             </motion.div>
           </div>
         </div>
@@ -407,10 +419,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
+            <h2 className="text-5xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
               Requisitos
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+            <p className="text-xl sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
               Conoce los requisitos básicos para formar parte de nuestro equipo en Almería
             </p>
           </motion.div>
@@ -558,10 +570,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
+            <h2 className="text-5xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
               Oportunidades Laborales
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2">
+            <p className="text-xl sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2">
               Descubre las diferentes áreas de trabajo disponibles en Almería
             </p>
           </motion.div>
@@ -582,11 +594,11 @@ export default function Home() {
                     <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Jardinería</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Jardinería</h3>
+                <p className="text-gray-600 mb-4 sm:mb-6 text-lg">
                   Trabajo en espacios verdes, mantenimiento de jardines y paisajismo en Almería
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-6">
+                <ul className="text-left text-gray-600 space-y-2 mb-4 sm:mb-6 text-lg">
                   <li>• Mantenimiento de jardines</li>
                   <li>• Paisajismo</li>
                   <li>• Cuidado de plantas</li>
@@ -619,11 +631,11 @@ export default function Home() {
                     <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Construcción</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Construcción</h3>
+                <p className="text-gray-600 mb-4 sm:mb-6 text-lg">
                   Oportunidades en construcción, reformas y obras en Almería
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-6">
+                <ul className="text-left text-gray-600 space-y-2 mb-4 sm:mb-6 text-lg">
                   <li>• Obras de construcción</li>
                   <li>• Reformas</li>
                   <li>• Albañilería</li>
@@ -656,11 +668,11 @@ export default function Home() {
                     <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Limpieza</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Limpieza</h3>
+                <p className="text-gray-600 mb-4 sm:mb-6 text-lg">
                   Servicios de limpieza en oficinas, hogares y espacios comerciales
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-6">
+                <ul className="text-left text-gray-600 space-y-2 mb-4 sm:mb-6 text-lg">
                   <li>• Limpieza de oficinas</li>
                   <li>• Limpieza doméstica</li>
                   <li>• Limpieza comercial</li>
@@ -787,30 +799,62 @@ ${data.message || 'Sin mensaje adicional'}
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <input
+                  id="contact-name"
                   type="text"
                   name="name"
+                  autoComplete="name"
                   placeholder="Nombre completo *"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      document.getElementById('contact-email')?.focus();
+                    }
+                  }}
                 />
                 <input
+                  id="contact-email"
                   type="email"
                   name="email"
+                  autoComplete="email"
                   placeholder="Email *"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      document.getElementById('contact-phone')?.focus();
+                    }
+                  }}
                 />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <input
+                  id="contact-phone"
                   type="tel"
                   name="phone"
+                  autoComplete="tel"
+                  inputMode="tel"
                   placeholder="Teléfono"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      document.getElementById('contact-interest')?.focus();
+                    }
+                  }}
                 />
                 <select 
+                  id="contact-interest"
                   name="interest"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      document.getElementById('contact-message')?.focus();
+                    }
+                  }}
                 >
                   <option value="">Selecciona área de interés</option>
                   <option value="Jardinería">Jardinería</option>
@@ -820,10 +864,12 @@ ${data.message || 'Sin mensaje adicional'}
                 </select>
               </div>
               <textarea
+                id="contact-message"
                 name="message"
+                autoComplete="off"
                 placeholder="Cuéntanos sobre tu experiencia y qué tipo de trabajo buscas..."
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               ></textarea>
               
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
@@ -873,34 +919,8 @@ ${data.message || 'Sin mensaje adicional'}
               <h3 className="text-2xl font-bold mb-4">Trabajos en Almería</h3>
               <p className="text-gray-300 mb-4">
                 Conectando talento con oportunidades en la hermosa provincia de Almería
-              </p>
-              <div className="flex space-x-4">
-                <span className="text-2xl">🏖️</span>
-                <span className="text-2xl">🏜️</span>
-                <span className="text-2xl">🌱</span>
-              </div>
+              </p>             
             </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Áreas de Trabajo</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Jardinería y Paisajismo</li>
-                <li>• Construcción y Obras</li>
-                <li>• Servicios de Limpieza</li>
-                <li>• Agricultura Intensiva</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Almería</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Playas de Cabo de Gata</li>
-                <li>• Desierto de Tabernas</li>
-                <li>• Clima Mediterráneo</li>
-                <li>• Calidad de Vida</li>
-              </ul>
-            </div>
-            
             <div>
               <h4 className="text-lg font-semibold mb-4">Contacto</h4>
               <div className="space-y-2 text-gray-300">
@@ -984,68 +1004,105 @@ ${data.experiencia || 'Sin experiencia especificada'}
               }}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="modal-nombre" className="block text-sm font-semibold text-gray-700 mb-2">
                       Nombre completo *
                     </label>
                     <input
+                      id="modal-nombre"
                       type="text"
                       name="nombre"
+                      autoComplete="name"
                       required
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                       placeholder="Tu nombre completo"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          document.getElementById('modal-email')?.focus();
+                        }
+                      }}
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="modal-email" className="block text-sm font-semibold text-gray-700 mb-2">
                       Email *
                     </label>
                     <input
+                      id="modal-email"
                       type="email"
                       name="email"
+                      autoComplete="email"
+                      inputMode="email"
                       required
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                       placeholder="tu@email.com"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          document.getElementById('modal-telefono')?.focus();
+                        }
+                      }}
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="modal-telefono" className="block text-sm font-semibold text-gray-700 mb-2">
                       Teléfono *
                     </label>
                     <input
+                      id="modal-telefono"
                       type="tel"
                       name="telefono"
+                      autoComplete="tel"
+                      inputMode="tel"
                       required
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                       placeholder="+34 123 456 789"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          document.getElementById('modal-edad')?.focus();
+                        }
+                      }}
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="modal-edad" className="block text-sm font-semibold text-gray-700 mb-2">
                       Edad
                     </label>
                     <input
+                      id="modal-edad"
                       type="number"
                       name="edad"
                       min="21"
+                      inputMode="numeric"
+                      autoComplete="off"
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                       placeholder="Tu edad"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          document.getElementById('modal-experiencia')?.focus();
+                        }
+                      }}
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="modal-experiencia" className="block text-sm font-semibold text-gray-700 mb-2">
                     Experiencia en {selectedJob} *
                   </label>
                   <textarea
+                    id="modal-experiencia"
                     name="experiencia"
                     rows={4}
                     required
+                    autoComplete="off"
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none"
                     placeholder={
                       selectedJob === 'Jardinería' 
@@ -1132,10 +1189,10 @@ ${data.experiencia || 'Sin experiencia especificada'}
           href="https://wa.me/5493512429578?text=Hola,%20me%20interesa%20aplicar%20para%20trabajos%20en%20Almería.%20Adjunto%20mi%20CV."
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-green-500 hover:bg-green-600 text-white p-4 sm:p-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50"
           aria-label="Contactar por WhatsApp"
         >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
           </svg>
         </a>
@@ -1143,7 +1200,7 @@ ${data.experiencia || 'Sin experiencia especificada'}
         {/* Back to Top Button */}
         <motion.button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-20 sm:bottom-32 right-4 sm:right-6 bg-gray-600 hover:bg-gray-700 text-white p-2 sm:p-3 rounded-full shadow-lg z-50"
+          className="fixed bottom-20 sm:bottom-32 right-4 sm:right-6 bg-gray-600 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full shadow-lg z-50"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 2 }}
@@ -1151,7 +1208,7 @@ ${data.experiencia || 'Sin experiencia especificada'}
           whileTap={{ scale: 0.9 }}
           aria-label="Volver arriba"
         >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </motion.button>
