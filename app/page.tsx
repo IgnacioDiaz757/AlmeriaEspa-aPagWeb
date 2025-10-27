@@ -287,7 +287,7 @@ export default function Home() {
                   href="#por-que-almeria"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl inline-block text-center"
                 >
-                  Ver Ofertas
+                  Ver Oportunidades
                 </a>
                 <a
                   href="#contacto"
