@@ -915,7 +915,7 @@ ${data.message || 'Sin mensaje adicional'}
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
+            <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">Trabajos en Almería</h3>
               <p className="text-gray-300 mb-4">
                 Conectando talento con oportunidades en la hermosa provincia de Almería
@@ -928,6 +928,20 @@ ${data.message || 'Sin mensaje adicional'}
                 <p>📞 +54 9 351 242 9578</p>
                 <p>📍 Córdoba, Argentina</p>
                   <p>🌐 <a href="https://www.riverasdelsuquia.com.ar" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-200">www.riverasdelsuquia.com.ar</a></p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">📍 Ubicación</h4>
+              <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3406.7922394847365!2d-64.2362187158602!3d-31.364711942351203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses-419!2sar!4v1761590324653!5m2!1ses-419!2sar" 
+                  width="100%" 
+                  height="100%" 
+                  style={{border:0}} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
