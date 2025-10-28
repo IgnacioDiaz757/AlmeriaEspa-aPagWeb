@@ -292,7 +292,7 @@ export default function Home() {
               ¡Únete a nuestro equipo! Oportunidades laborales en jardinería, construcción y limpieza
             </p>
             <p className="text-lg sm:text-base md:text-lg text-white mb-6 sm:mb-8 max-w-xl mx-auto px-2" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.6), 0 0 8px rgba(0,0,0,0.2)' }}>
-              🌴 Entre playas paradisíacas y el desierto de Tabernas
+          
             </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
                 <a
@@ -316,7 +316,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-block bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/30"
                 >
-                  Conócenos
+                  Conocenos
                 </a>
               </div>
           </div>
@@ -932,11 +932,11 @@ ${data.message || 'Sin mensaje adicional'}
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">📍 Ubicación</h4>
-              <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
+              <div className="w-[250px] h-[250px] rounded-lg overflow-hidden shadow-lg mx-auto">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3406.7922394847365!2d-64.2362187158602!3d-31.364711942351203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses-419!2sar!4v1761590324653!5m2!1ses-419!2sar" 
-                  width="100%" 
-                  height="100%" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8012043893164!2d-64.23834302539994!3d-31.36446459374143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936b187beb3%3A0xe8a8cf2c43bc0a9c!2sAv.%20Rafael%20N%C3%BA%C3%B1ez%204558%2C%20X5009CFZ%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1761650355626!5m2!1ses-419!2sar" 
+                  width="250" 
+                  height="250" 
                   style={{border:0}} 
                   allowFullScreen 
                   loading="lazy" 
