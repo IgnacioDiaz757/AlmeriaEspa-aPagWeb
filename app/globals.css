@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f9fafb;
   --foreground: #171717;
 }
 
@@ -10,44 +10,48 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-montserrat: var(--font-montserrat);
+  --font-oswald: var(--font-oswald);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #f9fafb;
     --foreground: #171717;
   }
   
   body {
-    background: #ffffff !important;
+    background: linear-gradient(to bottom right, #f9fafb, #eff6ff, #f3f4f6) !important;
     color: #171717;
   }
 }
 
 html {
-  background: #ffffff !important;
+  background: linear-gradient(to bottom right, #f9fafb, #eff6ff, #f3f4f6) !important;
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 body {
-  background: #ffffff !important;
+  background: linear-gradient(to bottom right, #f9fafb, #eff6ff, #f3f4f6) !important;
   color: #171717;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 #__next {
-  background: #ffffff !important;
+  background: transparent !important;
   margin: 0;
   padding: 0;
 }
 
 /* Ensure footer is at the bottom */
 main, div[data-main] {
-  background: #ffffff !important;
+  background: transparent !important;
 }
 
 /* Custom Animations */
@@ -253,4 +257,36 @@ form {
 
 .interactive-form select {
   cursor: pointer !important;
+}
+
+/* Fix WhatsApp button to stay fixed on mobile */
+a[aria-label="Contactar por WhatsApp"] {
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  z-index: 9999 !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+}
+
+@media (min-width: 640px) {
+  a[aria-label="Contactar por WhatsApp"] {
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+  }
+}
+
+/* Montserrat font class */
+.font-montserrat {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Oswald font class */
+.font-oswald {
+  font-family: var(--font-oswald), sans-serif !important;
+}
+
+.font-oswald * {
+  font-family: var(--font-oswald), sans-serif !important;
 }
