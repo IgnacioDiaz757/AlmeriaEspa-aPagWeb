@@ -40,7 +40,7 @@ export default function Requirements() {
           {/* Card Certificado de Buena Conducta */}
           <motion.a
             href="/guia-certificado-buena-conducta"
-            className="bg-gradient-to-br from-emerald-100 via-green-50 to-teal-100 p-8 rounded-3xl shadow-xl border-2 border-emerald-200/50 cursor-pointer block flex flex-col items-center justify-center min-h-[240px] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-8 rounded-3xl shadow-xl border-2 border-gray-700 cursor-pointer block flex flex-col items-center justify-center min-h-[240px] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -50,17 +50,17 @@ export default function Requirements() {
           >
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               {/* Icono */}
-              <div className="w-20 h-20 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-2">
-                <svg className="w-12 h-12 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-emerald-500/30 rounded-2xl flex items-center justify-center mb-2">
+                <svg className="w-12 h-12 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               {/* Título */}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-oswald uppercase tracking-wide">CERTIFICADO DE BUENA CONDUCTA</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-oswald uppercase tracking-wide">CERTIFICADO DE BUENA CONDUCTA</h3>
               {/* Subtítulo */}
-              <p className="text-sm text-gray-600 font-oswald uppercase tracking-wide">Documento oficial requerido</p>
+              <p className="text-sm text-gray-400 font-oswald uppercase tracking-wide">Documento oficial requerido</p>
               {/* CTA */}
-              <span className="inline-flex items-center text-sm text-emerald-600 font-semibold mt-2 font-oswald uppercase tracking-wide">
+              <span className="inline-flex items-center text-sm text-green-400 font-semibold mt-2 font-oswald uppercase tracking-wide">
                 Ver guía completa
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -71,7 +71,7 @@ export default function Requirements() {
 
           {/* Card Curriculum */}
           <motion.div
-            className="bg-gradient-to-br from-blue-100 via-indigo-50 to-blue-100 p-8 rounded-3xl shadow-xl border-2 border-blue-200/50 flex flex-col items-center justify-center min-h-[240px]"
+            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-8 rounded-3xl shadow-xl border-2 border-gray-700 flex flex-col items-center justify-center min-h-[240px]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -80,15 +80,15 @@ export default function Requirements() {
           >
             <div className="flex flex-col items-center justify-center space-y-4 text-center w-full">
               {/* Icono */}
-              <div className="w-20 h-20 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-2">
-                <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-blue-500/30 rounded-2xl flex items-center justify-center mb-2">
+                <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
               {/* Título */}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-oswald uppercase tracking-wide">CURRICULUM</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-oswald uppercase tracking-wide">CURRICULUM</h3>
               {/* Subtítulo */}
-              <p className="text-sm text-gray-600 font-oswald uppercase tracking-wide">Documento profesional actualizado</p>
+              <p className="text-sm text-gray-400 font-oswald uppercase tracking-wide">Documento profesional actualizado</p>
               {/* Botones */}
               <div className="flex flex-col gap-3 w-full mt-2">
                 <motion.a
@@ -121,7 +121,7 @@ export default function Requirements() {
 
           {/* Card Posibilidad Económica */}
           <motion.div 
-            className="bg-gradient-to-br from-amber-100 via-yellow-50 to-amber-100 p-8 rounded-3xl shadow-xl border-2 border-amber-200/50 cursor-pointer flex flex-col items-center justify-center min-h-[240px] focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-8 rounded-3xl shadow-xl border-2 border-gray-700 cursor-pointer flex flex-col items-center justify-center min-h-[240px] focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -132,17 +132,17 @@ export default function Requirements() {
           >
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               {/* Icono */}
-              <div className="w-20 h-20 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-2">
-                <svg className="w-12 h-12 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-amber-500/30 rounded-2xl flex items-center justify-center mb-2">
+                <svg className="w-12 h-12 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               {/* Título */}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-oswald uppercase tracking-wide">POSIBILIDAD ECONÓMICA</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-oswald uppercase tracking-wide">POSIBILIDAD ECONÓMICA</h3>
               {/* Subtítulo */}
-              <p className="text-sm text-gray-600 font-oswald uppercase tracking-wide">Recursos para viaje y estadía</p>
+              <p className="text-sm text-gray-400 font-oswald uppercase tracking-wide">Recursos para viaje y estadía</p>
               {/* CTA */}
-              <span className="inline-flex items-center text-sm text-amber-600 font-semibold mt-2 font-oswald uppercase tracking-wide">
+              <span className="inline-flex items-center text-sm text-orange-400 font-semibold mt-2 font-oswald uppercase tracking-wide">
                 Ver información
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -153,7 +153,7 @@ export default function Requirements() {
 
           {/* Card Pasaporte */}
           <motion.div 
-            className="bg-gradient-to-br from-slate-100 via-gray-50 to-slate-100 p-8 rounded-3xl shadow-xl border-2 border-slate-200/50 cursor-pointer flex flex-col items-center justify-center min-h-[240px] focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-8 rounded-3xl shadow-xl border-2 border-gray-700 cursor-pointer flex flex-col items-center justify-center min-h-[240px] focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -164,17 +164,17 @@ export default function Requirements() {
           >
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               {/* Icono */}
-              <div className="w-20 h-20 bg-slate-500/20 rounded-2xl flex items-center justify-center mb-2">
-                <svg className="w-12 h-12 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-slate-500/30 rounded-2xl flex items-center justify-center mb-2">
+                <svg className="w-12 h-12 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
                 </svg>
               </div>
               {/* Título */}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-oswald uppercase tracking-wide">PASAPORTE</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-oswald uppercase tracking-wide">PASAPORTE</h3>
               {/* Subtítulo */}
-              <p className="text-sm text-gray-600 font-oswald uppercase tracking-wide">Documento vigente y válido</p>
+              <p className="text-sm text-gray-400 font-oswald uppercase tracking-wide">Documento vigente y válido</p>
               {/* CTA */}
-              <span className="inline-flex items-center text-sm text-slate-600 font-semibold mt-2 font-oswald uppercase tracking-wide">
+              <span className="inline-flex items-center text-sm text-slate-400 font-semibold mt-2 font-oswald uppercase tracking-wide">
                 Ver información
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -185,7 +185,7 @@ export default function Requirements() {
 
           {/* Card Edad */}
           <motion.div
-            className="bg-gradient-to-br from-orange-100 via-rose-50 to-orange-100 p-8 rounded-3xl shadow-xl border-2 border-orange-200/50 flex flex-col items-center justify-center min-h-[240px]"
+            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-8 rounded-3xl shadow-xl border-2 border-gray-700 flex flex-col items-center justify-center min-h-[240px]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -194,15 +194,15 @@ export default function Requirements() {
           >
             <div className="flex flex-col items-center justify-center space-y-4 text-center w-full">
               {/* Icono */}
-              <div className="w-20 h-20 bg-orange-500/20 rounded-2xl flex items-center justify-center mb-2">
-                <svg className="w-12 h-12 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-orange-500/30 rounded-2xl flex items-center justify-center mb-2">
+                <svg className="w-12 h-12 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
               {/* Título */}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-oswald uppercase tracking-wide">EDAD</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-oswald uppercase tracking-wide">EDAD</h3>
               {/* Subtítulo */}
-              <p className="text-sm text-gray-600 font-oswald uppercase tracking-wide">+21 años hasta 50 años</p>
+              <p className="text-sm text-gray-400 font-oswald uppercase tracking-wide">+21 años hasta 50 años</p>
               {/* Botones */}
               <div className="flex flex-col gap-3 w-full mt-2">
                 <motion.button
@@ -233,9 +233,9 @@ export default function Requirements() {
         </div>
         
         <div className="mt-8 sm:mt-12 text-center">
-          <div className="bg-gradient-to-r from-green-100 to-blue-100 p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto border-2 border-green-200">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 font-oswald uppercase tracking-wide">¡NOSOTROS TE AYUDAMOS CON TODO!</h3>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg font-oswald uppercase tracking-wide">
+          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black p-6 sm:p-8 rounded-2xl max-w-4xl mx-auto border-2 border-gray-700">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 font-oswald uppercase tracking-wide">¡NOSOTROS TE AYUDAMOS CON TODO!</h3>
+            <p className="text-gray-300 mb-4 sm:mb-6 text-base sm:text-lg font-oswald uppercase tracking-wide">
               <strong>TE GUIAMOS EN TODO EL PROCESO Y EL CONTRATO LABORAL.</strong> 
               SI CUMPLES LOS REQUISITOS BÁSICOS, TE ACOMPAÑAMOS EN CADA PASO PARA QUE PUEDAS EMPEZAR A TRABAJAR EN ALMERÍA.
             </p>
@@ -244,7 +244,7 @@ export default function Requirements() {
               href="https://forms.gle/PFHTpawt5Cj2DbAC7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg font-oswald uppercase tracking-wide"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg font-oswald uppercase tracking-wide"
               whileHover={{ scale: 1.1, y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)" }}
               whileTap={{ scale: 0.95 }}
             >
@@ -254,7 +254,7 @@ export default function Requirements() {
                 href="https://wa.me/5493512429578?text=Hola,%20necesito%20más%20información%20sobre%20los%20trabajos%20en%20Almería"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg font-oswald uppercase tracking-wide"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg font-oswald uppercase tracking-wide"
                 whileHover={{ scale: 1.1, y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >

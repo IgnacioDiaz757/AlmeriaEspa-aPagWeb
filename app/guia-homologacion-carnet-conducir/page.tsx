@@ -109,6 +109,36 @@ export default function GuiaHomologacionCarnetConducir() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
+            className="mb-8"
+          >
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-4 font-oswald uppercase tracking-wide">
+              🎥 VIDEO TUTORIAL:
+            </h3>
+            <div className="w-full px-0 sm:px-0">
+              <div className="relative w-full overflow-hidden rounded-lg shadow-xl" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                  src="https://www.youtube.com/embed/ZxJm-xu2ZgQ"
+                  title="Guía de Homologación del Carnet de Conducir"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
           >
             <h3 className="text-2xl font-bold text-red-700 mb-3 font-oswald uppercase tracking-wide">
               DOCUMENTACIÓN NECESARIA:
